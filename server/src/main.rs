@@ -10,15 +10,9 @@ use std::error::Error;      //
 use regex::Regex;
 use actix_web::{HttpServer, App, web};
 use std::io;
-<<<<<<< HEAD
 use crate::handlers::*;
 use dotenv::dotenv;
 use tokio_postgres::NoTls;
-=======
-use dotenv::dotenv;
-use tokio_postgres::NoTls;
-use crate::handlers::*;
->>>>>>> Desarrollo
 
 extern crate regex;
 
@@ -73,47 +67,33 @@ impl Persona{
             }
             //print!("{},{},{},{},{},{},{},{},{},{}\n",temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9,temp10);
             //calculo posiciones pares
-<<<<<<< HEAD
             if (temp1 * 2) > 9{
-=======
-            if((temp1 * 2) > 9){
->>>>>>> Desarrollo
+
                 temp1 = temp1*2 - 9;
             }else{
                 temp1 =temp1*2;
             };
-<<<<<<< HEAD
             if (temp3 * 2) > 9{
-=======
-            if((temp3 * 2) > 9){
->>>>>>> Desarrollo
+
                 temp3 = temp3*2 - 9;
             }else {
                 temp3 = temp3*2;
             };
-<<<<<<< HEAD
             if (temp5 * 2) > 9{
-=======
-            if((temp5 * 2) > 9){
->>>>>>> Desarrollo
+
                 temp5 = temp5*2 -9;
             } else {
                 temp5 = temp5*2;
             };
-<<<<<<< HEAD
+
             if (temp7 * 2) > 9{
-=======
-            if((temp7 * 2) > 9){
->>>>>>> Desarrollo
                 temp7 = temp7*2 - 9;
             } else {
                 temp7 =temp7*2;
             };
-<<<<<<< HEAD
+
             if (temp9 * 2) > 9{
-=======
-            if((temp9 * 2) > 9){
->>>>>>> Desarrollo
+
                 temp9 = temp9*2 -9;
             } else {
                 temp9 = temp9*2;
@@ -173,11 +153,9 @@ impl Persona{
 
     fn validar_tel(&self) -> bool{
         
-<<<<<<< HEAD
+
         if self.telefono.len()== 9 || self.telefono.len()== 12 {
-=======
-        if(self.telefono.len()== 9 || self.telefono.len()== 12){
->>>>>>> Desarrollo
+
             let telefono_regex = Regex::new(r"^((?:593)*0[2-7][0-9]{7})").unwrap();
             let res = telefono_regex.is_match(&self.telefono);
             return res
@@ -204,12 +182,6 @@ impl Persona{
     }
 }
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> Desarrollo
 #[actix_rt::main]
 async fn main() -> io::Result<()>{
     
@@ -237,12 +209,7 @@ async fn main() -> io::Result<()>{
         println!("{}",vector_data[n]);
     }*/
 
-<<<<<<< HEAD
-=======
-    ///deberia sacar el vector, ponerlos en los datos y esos pasarlos por parametros.
-    
 
->>>>>>> Desarrollo
     let lines: Vec<&str> = contents.lines().collect();
     for i in 0..lines.len(){
         println!("{}",lines[i]);
@@ -329,11 +296,8 @@ async fn main() -> io::Result<()>{
         App::new()
             .data(pool.clone())
             .route("/",web::get().to(status))
-<<<<<<< HEAD
             .route("/personas{_:/?}", web::get().to(get_personas))
-=======
-            .route("/personas", web::get().to(get_personas))
->>>>>>> Desarrollo
+
     })
     .bind(format!("{}:{}", config.server.host, config.server.port))?
     .run()
