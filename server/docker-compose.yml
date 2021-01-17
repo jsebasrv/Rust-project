@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+  postgres:
+<<<<<<< HEAD
+    image: postgres:12-alpine
+    restart: always
+=======
+    image: postgres:11-alpine
+    restart: always 
+>>>>>>> Desarrollo
+    environment: 
+      POSTGREST_PASSWORD: admin
+      POSTGREST_USER: postgres
+      POSTGRES_DB: rust
+    ports:
+      - 5432:5432
