@@ -15,7 +15,13 @@ Ingresar a la carpeta data y tomar el archivo persona.sql y crear al base de dat
 
 Una vez creada la base de datos tomar el archivo "inserciones manuales.txt" y correr el script dentro de la base de datos creada
 
+Para cargar el archivo se debe guardar dentro de la carpeta data.
+Una vez ahí, se debe abrir el archivo "models" y buscar el metodo cargar_datos()
+
+En la variable contenedora del path debemos cambiar que existe por el nombre del archivo que queremos subir
+
 Luego por medio de la línea de comando ir a la ubicación del proyecto, a la carpera "server" y ejecutar el comando cargo run.
 
 crear el encapsulamiento de todo se debe correr el siguiente comando:
 Luego ejecutar el comando docker-compose up -d
+
