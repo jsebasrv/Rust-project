@@ -1,0 +1,2 @@
+INSERT INTO person ('ci', 'nombre', 'genero','estado_civil','fecha_nac','telefono','direccion','email','validado','observacion')
+VALUES ("1759203464", "SEBASTIAN RUEDA", "M",'SOLTERO','1996-03-10','0979138132','miguel donoso','sebas18rueda@gmail.com','1','es valido');
