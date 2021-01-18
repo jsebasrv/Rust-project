@@ -19,4 +19,6 @@ pub async fn get_personas(db_pool: web::Data<Pool>) -> impl Responder{
         Err(_) => HttpResponse::InternalServerError().into()
 
     }
-} 
+}
+
+//crear funcion que "implemente lo que esta en db para el post"

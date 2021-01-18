@@ -176,7 +176,7 @@ pub fn carga_datos(){
     let mut v: Vec<&str>;
     for i in 0..lines.len(){
         //println!("{}",lines[i]);
-        vector.push(lines[i]);
+        //vector.push(lines[i]);
         for j in 0..8{
             v = lines[i].split(';').collect();
 

@@ -19,6 +19,7 @@ async fn main() -> io::Result<()>{ //async y esto va despues del main
     let config = crate::config::Config::from_env().unwrap();
 
     let pool = config.pg.create_pool(NoTls).unwrap();
+    
 
     //creacion del server
     HttpServer::new(move || {

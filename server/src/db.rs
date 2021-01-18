@@ -17,3 +17,5 @@ pub async fn get_personas(client: &Client)-> Result<Vec<Persona>,io::Error>{
 
     Ok(personas)
 }
+
+//debo crear una funcion que haga la insercion
