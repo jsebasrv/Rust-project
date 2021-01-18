@@ -171,13 +171,17 @@ pub fn carga_datos(){
 
 
     let lines: Vec<&str> = contents.lines().collect();
-    //let mut vector: Vec<&Persona>;
+    //println!("{}",lines[0]);
+    let mut vector: Vec<&str>;
     let mut v: Vec<&str>;
     for i in 0..lines.len(){
         //println!("{}",lines[i]);
-        
+        vector.push(lines[i]);
         for j in 0..8{
             v = lines[i].split(';').collect();
+
+            
+            //vector = v[i]
             /*
             let ci:String = v[0].to_string();
             let name: String = v[1].to_string();
@@ -202,15 +206,15 @@ pub fn carga_datos(){
             };
             
 
+
             validar_datos(per);
             /*println!("{},{},{},{},{},{},{},{},{}", per.ci, per.nombre, per.genero, per.estado_civil, per.fecha_nac,
             per.telefono, per.direccion, per.email, per.validado);*/
-            println!("{}",v[j]);
+            println!("soy vector {}",v[j]);
         }
-
+        
     }
 
-    
 }
 
 fn validar_datos(mut per : Persona){        //, mut observacion: String

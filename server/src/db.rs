@@ -16,5 +16,4 @@ pub async fn get_personas(client: &Client)-> Result<Vec<Persona>,io::Error>{
         .collect::<Vec<Persona>>();
 
     Ok(personas)
-
 }
